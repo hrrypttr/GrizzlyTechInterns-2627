@@ -3,11 +3,10 @@ import com.seattlesolvers.solverslib.command.SubsystemBase;
 import com.seattlesolvers.solverslib.hardware.motors.Motor;
 
 public class MotorSubsystem extends SubsystemBase {
-    private Motor motor;
-    private double motorSpeed = 0.0;
+    private Motor m;
+    private double ms = 0.0;
   
-    public MotorSubsystem(
-            com.qualcomm.robotcore.hardware.HardwareMap hardwareMap) {
+    public MotorSubsystem(com.qualcomm.robotcore.hardware.HardwareMap hardwareMap) {
         motor = new Motor(hardwareMap, "SOLVERS_MOTORS");
         motor.stopMotor();
     }
